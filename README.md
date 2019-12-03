@@ -1,11 +1,13 @@
 # IONDV-Basic for Arm32
 
 ## About
-The context for building docker containers with mongodb-3.2.12 and iondv-basic ( https://hub.docker.com/r/iondv/basic )
-arm32 compatible mongodb container is based on https://github.com/robertsLando/MongoDB-OrangePI
-mongodb binaries are provided under GNU AGPL v3.0
+The context for building docker containers with arm32 version of [mongodb-3.2.12](https://hub.docker.com/r/iondv/arm32-mongodb)
+ and iondv-basic (https://hub.docker.com/r/iondv/arm32-basic).
+ 
+ 
+iondv/arm32-mongodb container is based on https://github.com/robertsLando/MongoDB-OrangePI mongodb binaries are provided under GNU AGPL v3.0
 
-IONDV. Basic is designed to quickly launch simplest [IONDV. applications](https://github.com/iondv/framework) that do not require a complete build cycle. The image has built-in automatic deployment of any iondv application mounted in the applications folder.
+iondv/arm32-basic is based on [IONDV. Basic](https://hub.docker.com/r/iondv/basic) - an app that is designed to quickly launch simplest [IONDV. applications](https://github.com/iondv/framework) that do not require a complete build cycle. The image has built-in automatic deployment of any iondv application mounted in the applications folder.
 
 IONDV configuration was tested for [ASUS Tinker-Board](https://www.asus.com/us/Single-Board-Computer/Tinker-Board/)
 
@@ -38,9 +40,8 @@ docker run -d --name iondv-basic -v /workspace/nutrition-tickets:/var/www/applic
 ```
 
 ## Docker build
-### Build iondv-basic docker image
 
-Necessary steps to build the iondv-basic - install docker CE:
+Necessary steps to build docker images - install docker CE:
 
 ```
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
@@ -50,6 +51,13 @@ sudo add-apt-repository "deb [arch=armhf] https://download.docker.com/linux/debi
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo groupadd docker
 sudo usermod -aG docker $USER
+```
+
+### Build iondv-basic docker image
+
+Necessary steps to build the iondv-basic :
+
+```
 sudo apt-get install git
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
