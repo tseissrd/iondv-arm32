@@ -88,7 +88,6 @@ docker build -t iondv/arm32-basic:3.1.0 -t iondv/arm32-basic:latest .
 
 
 ### Build arm32-mongodb
-Building the containers is done in appropriate directories with:
 
 To build mongo arm32-mongodb
 
