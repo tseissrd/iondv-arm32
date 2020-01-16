@@ -69,7 +69,7 @@ Next build an empty iondv app structure. Clone the iondv-framework into any fold
 
 ```
 git clone https://github.com/iondv/framework iondv-app
-cd modules
+cd iondv-app/modules
 git clone https://github.com/iondv/registry
 git clone https://github.com/iondv/rest
 git clone https://github.com/iondv/ionadmin
